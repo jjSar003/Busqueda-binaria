@@ -3,7 +3,7 @@ def busqueda(lista, num, inicio, fin):
     Si el valor no esta dentro de la lista retorna -1, de lo contrario retorna
     la posicion del numero."""
     if inicio > fin:
-        return -1
+        return False
     
     medio = inicio + (fin - inicio) // 2
     if lista[medio] == num:
@@ -25,7 +25,7 @@ num_objetivo = 2
 #Se llama a la funcion que realiza la busqueda binaria y se almacena el retorno
 resultado = busqueda(numeros, num_objetivo, 0, fin)
 #Se muestra por pantalla el resultado de la busqueda 
-if resultado != -1:
+if resultado:
     print(f"El numero esta en la posicion {resultado}")
 else:
     print("El numero no esta en la lista")
